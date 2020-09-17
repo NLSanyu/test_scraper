@@ -15,7 +15,4 @@ class TestSpiderOne(scrapy.Spider):
                 room_count: property_item.css('span.property-card__feature::text')[1].get(),
                 rent: property_item.css('span.property-card__price::text').get()
             }
-        next_page = response.css('a.next-posts-link::attr(href)').get()
-        if next_page is not None:
-            next_page = response.urljoin(next_page)
-            yield scrapy.Request(next_page, callback=self.parse)
+
