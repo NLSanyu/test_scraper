@@ -1,9 +1,10 @@
 import scrapy
+from decouple import config
 
 class TestSpiderOne(scrapy.Spider):
     name = "test_one"
     start_urls = [
-        "https://www.laforet.com/louer/rechercher?next=100000"
+        config['SITE_URL_1']
     ]
     
     def parse(self, response):

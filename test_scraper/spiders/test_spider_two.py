@@ -1,9 +1,10 @@
 import scrapy
 
+
 class TestSpiderTwo(scrapy.Spider):
     name = "test_two"
     start_urls = [
-        "https://www.lemoo.nl/woningaanbod?status=rent"
+        config['SITE_URL_2']
     ]
     
     def parse(self, response):
