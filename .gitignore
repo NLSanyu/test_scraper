@@ -1,0 +1,5 @@
+# Ignore the virtual env folder:
+venv
+
+# Scrapy stuff:
+.scrapy
